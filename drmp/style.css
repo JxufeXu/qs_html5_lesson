@@ -1,0 +1,62 @@
+html{
+    font-size: 10px;
+    background:url(./images/bg.jpg);
+    /* css3 背景 
+    多屏时代 电脑 手机 iPad 访问同一资源
+    一张图片在不同设备上怎么做背景？
+    盒子大小wh和图片wh的关系
+    等比例放大或缩小图片，填充满整个容器，
+    超过的地方（不等比） 裁掉多余部分
+    背景填满，最重要的部分显示出来*/
+    background-size:cover;
+}
+body,html{
+    margin: 0;/* reset */
+    padding: 0;
+    font-family: sans-serif;
+}
+.keys{
+    /*PC mobile ipad 物联网任何屏*/
+    display: flex;
+    /*相对单位 相对视窗
+    100vh*/
+    min-height: 100vh;
+    /*专属于弹性布局的纵轴对齐方式*/
+    align-items: center;
+    /*专属于弹性布局的主轴对齐方式*/
+    justify-content: center;
+}
+.key{
+    color: #ffffff;
+    text-align: center;
+    width: 10rem;
+    border:.4rem solid #000000;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5em;
+    padding: 1rem 0.5rem;
+    /*css 效果过渡动画*/
+    transition: all .07s ease;
+}
+.key div{
+    font-size: 4rem;
+}
+.sound{
+   /* rem 是一个相对单位 px
+    px 在多端时代行不通
+    手机的密度是不同的 retina 三倍的retina
+    px 不可靠
+    rem 相对 html font-size等比例
+    12px = 1.2rem * 10px(参照物html根)*/
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color:#ffc600;
+    box-shadow: 0 0 .5rem black;
+}
+.playing{
+    /*转换样式 移动，缩放，旋转*/
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}

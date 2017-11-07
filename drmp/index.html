@@ -8,6 +8,75 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <div class="keys">
+    <div class="key" data-key="65">push
+      <div>A</div>
+      <span class="sound">clap</span>
+    </div>
+    <div class="key">
+      <div>S</div>J
+      <span class="sound">hihat</span>
+    </div>
+    <div class="key">
+      <div>D</div>
+      <span class="sound">kick</span>
+    </div>
+    <div class="key">
+      <div>F</div>
+      <span class="sound">openhat</span>
+    </div>
+    <div class="key">
+      <div>G</div>
+      <span class="sound">boom</span>
+    </div>
+    <div class="key">
+      <div>H</div>
+      <span class="sound">ride</span>
+    </div>
+    <div class="key">
+      <div>J</div>
+      <span class="sound">snare</span>
+    </div>
+    <div class="key">
+      <div>K</div>
+      <span class="sound">tom</span>
+    </div>
+    <div class="key">
+      <div>L</div>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+  <!-- 音乐资源引入 canvas -->
+  <audio data-key="65" src="./sounds/clap.wav"></audio>
+  <audio src="./sounds/hihat.wav"></audio>
+  <audio src="./sounds/kick.wav"></audio>
+  <audio src="./sounds/openhat.wav"></audio>
+  <audio src="./sounds/boom.wav"></audio>
+  <audio src="./sounds/ride.wav"></audio>
+  <audio src="./sounds/snare.wav"></audio>
+  <audio src="./sounds/tom.wav"></audio>
+  <audio src="./sounds/tink.wav"></audio>
+  <script>
+    //负责交互
+    //1 键盘事件监听
+    function playSound(e){
+      //事件对象在事件发生的一刹那，会生成事件对象，
+      console.log(e.keyCode);
+      const audio = document.querySelector('audio[data-key="'+e.keyCode+'"]');
+      const key = document.querySelector('div[data-key="'+e.keyCode+'"]')
+      audio.play();
+      key.classList.add('playing');
+      setTimeout(function(){
+        key.classList.remove('playing');
+      },200);
+    }
+
+    //函数名 占位符号
+    window.addEventListener('keydown',playSound);
+    //2 e.keyCode => 页面中.key
+     // DOM 查找 
+    //3 加class.playing
+    
+  </script>
 </body>
 </html>
