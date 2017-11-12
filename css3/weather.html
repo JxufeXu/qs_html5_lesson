@@ -20,7 +20,10 @@
       /* 渐变方向 top left right bottom
       color stop 颜色断点  color percent */
       background:
-       -webkit-linear-gradient(left, #00BBFF, #00BBFF 14.3%, #2EB5E5 14.3%, #2EB5E5 28.6%,#E6E6E6 28.6%, #E6E6E6 42.9%,#F3D166 42.9%,#F3D166 57.2%,#222233 57.2%, #222233 71.5%,#444444 71.5%, #444444 85.8%, #85DB8c 85.8%);
+       -webkit-linear-gradient(left, #00BBFF, #00BBFF 14.3%,
+        #2EB5E5 14.3%, #2EB5E5 28.6%,#E6E6E6 28.6%, #E6E6E6 42.9%,
+        #F3D166 42.9%,#F3D166 57.2%,#222233 57.2%, #222233 71.5%,
+        #444444 71.5%, #444444 85.8%, #85DB8c 85.8%);
       position: absolute;
       top: 50%;
       left: 50%;
@@ -94,11 +97,11 @@
       top: 70px;
       margin-left: -60px;
       /* 多重阴影来绘制云 */
-      box-shadow: #FFFFFF 65px -15px 0 -5px,
-          #FFFFFF 25px -25px,
-          #FFFFFF 30px 10px,
+       box-shadow: #FFFFFF 65px -15px 0 -5px,
+           #FFFFFF 25px -25px,
+           #FFFFFF 30px 10px,
           #FFFFFF 60px 15px 0 -10px,
-            #FFFFFF 85px 5px 0 -5px; 
+            #FFFFFF 85px 5px 0 -5px;  
     }
     /* 阴云的影子 */
     .cloudy:after{
@@ -152,3 +155,5 @@
   </div>
 </body>
 </html>
+
+
