@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>music player</title>
+	<link rel="stylesheet" type="text/css"
+	 href="/player.css"/>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="bg" class="bg">
+			<div class="bg-cover"></div>
+		</div>
+		<div class="title">
+			<div class="music-info">
+				<div class="song" id="songName"></div>
+				<div class="artist" id="artist"></div>
+			</div>
+		</div>
+		<div class="play-board">
+			<img src="/resource/images/play_needle.png"
+             alt="" class="play-needle pause-needle" id="needle">
+             <div class="disk-bg"></div>
+             <div class="disk-cover disk-cover-animation">
+                 <img src="/resource/images/placeholder_disk_play_song.png"
+                  alt=""
+                  class="album">
+                 <img src="/resource/images/play_disc.png"
+                  class="disk-border" alt="">
+             </div>
+             <div class="footer">
+                    <div class="process" id="process">
+                        <span id="currentTime">00:00</span>
+        
+                        <div class="process-bar">
+                            <div class="rdy"></div>
+                            <div class="cur">
+                                <span id="processBtn" class="process-btn c-btn"></span>
+                            </div>
+                        </div>
+                        <span id="totalTime">00:00</span>
+                    </div>
+                    <div class="control" id="controls">
+                        <span class="c-btn loop-btn" onclick="MusicPlayer.loop()"></span>
+                        <span class="pre c-btn" onclick="MusicPlayer.prev()"></span>
+                        <span class="play c-btn" onclick="MusicPlayer.play()"></span>
+                        <span class="pause c-btn" onclick="MusicPlayer.pause()" style="display: none"></span>
+                        <span class="next c-btn" onclick="MusicPlayer.next()"></span>
+                        <span class="c-btn list-btn" onclick="MusicPlayer.showPlayList()"></span>
+                    </div>
+                </div>
+         </div>
+ 
+        </div>
+        
+	</div>
+	<!-- window.onload  js 阻塞
+	cdn 技术， 将会找到离你最近的服务器节点
+	提供文件访问
+	为什么要用cdn 速度快
+	有可能别的网站用的也是这个cdn地址
+    浏览器缓存文件  -->
+    <audio id='player'></audio>
+	<script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.js 
+
+"></script>
+	<script src="/player.js"></script>
+</body>
+</html>

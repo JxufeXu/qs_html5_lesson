@@ -1,0 +1,17 @@
+#loading {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -.86667rem;
+	margin-top: -1.46667rem;
+	z-index: 9999;
+}
+#loading, #loading .loading {
+	width: 1.73333rem;
+	height: 1.73333rem;
+}
+#loading .loading {
+    background: url(//gw.alicdn.com/tfs/TB1ZoYwbMvD8KJjy0FlXXagBFXa-130-130.gif )
+     no-repeat 50%;
+	background-size: 100% 100%;
+}
