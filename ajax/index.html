@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax 构建假数据</title>
+</head>
+<body>
+    <div class="box">
+        <img src="" id="avater">
+        <div id="username">姓名:<span></span></div>
+        <div id="sex">性别:<span></span></div>
+    
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/2.1.2/jquery.min.js 
+
+"></script>
+    <script>
+        // document.onready
+        $(function(){
+            // js 主动拉数据 ajax 异步请求，动态渲染
+            // 拉数据
+            // $.getJSON('http://www.easy-mock.com/mock/5a09868228b23066479b8377/ajaxData/getUserInfo 
+
+
+            // function(data){
+            //     // success callback
+            //     console.log(data);
+            //     // dom 更新
+            //     var avater = data.data.avater;
+            //     var username = data.data.nickname;
+            //     var sex = data.data.sex;
+            //     // console.log(avater, username, sex);
+            //     $('#avater').attr('src',avater);
+            //     // alert(document.getElementById('avater').getAttribute('src'));
+            //     // $('#username span').text(username);
+            //     // $('#sex span').text(sex);
+            //     $('#username').find('span').text(username);
+            //     $('#sex').find('span').text(sex);
+            // })
+            // 数据通信
+            var getUserInfo = function(callback){
+                // 异步处理 js 消耗时间，传输ajax，callback回调 
+                // 成功返回时，执行
+                // 数据库处理 文件的读写
+                $.getJSON('http://www.easy-mock.com/mock/5a09868228b23066479b8377/ajaxData/getUserInfo ',function(data){
+                    callback(data);
+                });
+            }
+            var renderUserInfo = function(data){
+
+                var avater = data.data.avater;
+                var username = data.data.nickname;
+                var sex = data.data.sex;
+                $('#avater').attr('src',avater);
+                $('#username').find('span').text(username);
+                $('#sex').find('span').text(sex);
+
+            }
+            getUserInfo(renderUserInfo);
+            // 渲染页面 dom api
+
+            
+            
+        })
+    </script>
+</body>
+</html>
