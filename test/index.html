@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js 
+
+ "></script>
+    <title>手机锁屏界面</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    
+      html, body {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        background-color: #535f5c;
+       
+      }
+      .page__hd {
+          height: 6rem;
+          width: 10rem;
+      }
+      .page__title {
+          color: #e6fbff;
+          font-size: 24px;
+          text-align:center;
+          line-height: 6rem;
+      }
+      .page__bd {
+          width: 8.5rem;
+          height: 10rem;
+          margin-left: 1rem;
+      }
+   
+      .page__bd .sp_items__item{
+        width: 1.6rem;
+        height: 1.6rem;
+        border:2px solid #6b8fa0;
+        border-radius:1.6rem;
+        float: left;
+        margin:0.4rem 0.5rem;
+        text-align: center;
+      }
+       .round_btn {
+        color: #e6fbff;
+        margin:0 auto;
+        line-height: 1.6rem;
+        font-size: 25px;
+      }
+       .sp_items--active {
+          left: 1.06rem;
+      }
+      .sp_items__item.sp_items__last{
+        margin-left: 3.2rem;
+        }
+        .page__ft {
+            position:relative; 
+            bottom:0; 
+            left:0;
+            align-self: flex-end;
+            width: 100%;
+            height: 1.5rem;
+            }
+        .btn.btn-default{
+            /* width: 3rem; */
+            color:#1b405d;
+            font-size: 18px;
+            margin-left: 0.5rem;
+             font-weight:bold;
+           
+        }
+        .sp_btn_wrapper{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+           
+        }
+        
+        .btn.btn-default.right {
+            float: right;
+            margin-right: 0.5rem;
+            font-weight:bold;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div class="page">
+        <div class="page__hd">
+            <div class="page__title">输入密码</div>
+        </div>
+        <div class="page__bd">
+            <ul class="sp_items">
+                <!-- class间存在空格代表多个类名
+                sp_items__item sp_items__last
+                 .sp_items__item.sp_items__last
+                -->
+                <li class="sp_items__item sp_items--active"><a href="javascript:;" class="round_btn">1</a></li>
+                <li class="sp_items__item"><a href="javascript:;" class="round_btn">2</a></li>
+                <li class="sp_items__item"><a href="javascript:;" class="round_btn">3</a></li>
+                <li class="sp_items__item sp_items--active"><a href="javascript:;" class="round_btn">4</a></li>
+                <li class="sp_items__item"><a href="javascript:;" class="round_btn">5</a></li>
+                <li class="sp_items__item"><a href="javascript:;" class="round_btn">6</a></li>
+                <li class="sp_items__item sp_items--active"><a href="javascript:;" class="round_btn">7</a></li>
+                <li class="sp_items__item"><a href="javascript:;" class="round_btn">8</a></li>
+                <li class="sp_items__item"><a href="javascript:;" class="round_btn">9</a></li>
+                <li class="sp_items__item sp_items__last"><a href="javascript:;" class="round_btn">0</a></li>
+            </ul>
+        </div>
+        <div class="page__ft">
+            <div class="sp_btn_wrapper">
+                <a class="btn btn-default">紧急呼叫</a>
+                <a class="btn btn-default right">取消</a>
+            </div>
+        </div>
+    </div>
+ 
+    
+</body>
+</html>
