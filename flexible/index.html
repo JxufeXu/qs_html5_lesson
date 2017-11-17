@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>栅格系统</title>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js "></script>
+    <script src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+    <style>
+    *{
+        margin: 0;
+        padding: 0
+    }
+    html,body,.page{
+        height:100%;
+    }
+    .full_page{
+        width: 10rem;
+        height: 100%
+    }
+    .col-1,.col-2,.col-6{
+        float: left;
+        height: 100%;
+    }
+    .col-1 {
+		width: 1rem;
+		
+	}
+    .col-2{
+        width: 2rem;
+        float: left;
+        height: 100%;
+    }
+    .col-6{
+        width: 6rem;
+        float: left;
+        height: 100%;
+    }
+    .col:nth-child(odd) {
+       background-color: green;
+    }
+    .col:nth-child(even) {
+        background-color: yellow;
+    }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="row full_page">
+            <div class="col col-2"></div>
+            <div class="col col-6"></div>
+            <div class="col col-2"></div>
+            <!-- <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div> -->
+        </div>
+    </div>
+</body>
+</html>
