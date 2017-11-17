@@ -13,9 +13,7 @@
         <div id="sex">性别:<span></span></div>
     
     </div>
-    <script src="https://cdn.bootcss.com/jquery/2.1.2/jquery.min.js 
-
-"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.1.2/jquery.min.js "></script>
     <script>
         // document.onready
         $(function(){
@@ -48,22 +46,22 @@
                     callback(data);
                 });
             }
+            // 渲染页面 dom api
             var renderUserInfo = function(data){
 
                 var avater = data.data.avater;
                 var username = data.data.nickname;
                 var sex = data.data.sex;
-                $('#avater').attr('src',avater);
+                $('#avater').attr('src',avater);//获取avatar标签的src属性
                 $('#username').find('span').text(username);
                 $('#sex').find('span').text(sex);
 
             }
             getUserInfo(renderUserInfo);
-            // 渲染页面 dom api
 
             
             
-        })
+        }
     </script>
 </body>
 </html>
