@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		* { margin: 0; padding: 0;}
+		html, body {
+			height: 100%;
+		}
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.inner {
+			width: 100px;
+			height: 100px;
+			background: blue;
+			align-self: flex-end;
+		}
+	</style>
+</head>
+<body>
+    <a href="http://www.baidu.com " j id="lnk">前往百度</a>
+	<div class="box">
+		<div class="inner">
+		</div>
+	</div>
+	<script>
+	var oBox = document.querySelector('.box'),
+	oInner = document.querySelector('.inner');
+	oInner.addEventListener('click', 
+	function(e) {
+        // 停止冒泡
+        // e.stopPropagation();
+
+		console.log('点击了inner');
+	},true);
+	oBox.addEventListener('click', 
+	function(e) {
+		console.log('点击了外部盒子');
+    },true);
+    document
+    .getElementById('lnk')
+    .addEventListener('click',
+    function(e){
+        e.preventDefault();//阻止事件发生
+      alert('问度娘');
+    },false);
+	</script>
+</body>
+</html>
