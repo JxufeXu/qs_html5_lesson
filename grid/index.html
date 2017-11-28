@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid布局--走向未来</title>
+    <style>
+        .grid {
+            /* 九宫格指定了大小的，同时让我们指定了行与列
+            平面布局的形象理解 */
+            display: grid;
+            /* flex: 1; */
+            /* fraction 等比例进行划分 */
+            /* grid-template-columns:1fr 3fr 2fr 1fr; */
+             /* grid-template-rows: 200px 200px 200px; */
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,200px);
+            grid-gap:20px;
+            /* display: grid;
+            grid-template-columns: 100px 100px 100px ;
+            grid-template-rows: 100px 100px 100px; */
+            /* 行列相交 cell */
+        }
+        .grid div:nth-child(2n){
+            background-color: pink;
+        }
+        .grid div:nth-child(2n+1){
+            background-color:lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

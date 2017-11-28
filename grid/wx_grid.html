@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/iconfont.css">
+    <title>Document</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,150px);
+            grid-gap: 5px;
+            background-color: white;
+        }
+        .grid div:nth-child(2n){
+            background-color: pink;
+        }
+        .grid div:nth-child(2n+1){
+            background-color:lightpink;
+        }
+        .grid div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1 grid 布局 快速解决九宫格布局
+    2 columns 1fr 高度？ flexib.js 10/3.rem
+    3 icon 文字 iconfont
+    4 内部对齐方式？ 水平居中 垂直居中 flex-direction:column -->
+    <div class="grid">
+        <div><i class="iconfont icon-xinyongqiahuankuan"></i>
+        <p>信用卡还款</p></div>
+        <div><i class="iconfont icon-jieqian"></i><p>微粒贷借钱</p></div>
+        <div><i class="iconfont icon-qian"></i><p>手机充值</p></div>
+        <div><i class="iconfont icon-licaitong"></i><p>理财通</p></div>
+        <div><i class="iconfont icon-shenghuojiaofei"></i><p>生活缴费</p></div>
+        <div><i class="iconfont icon-qbichongzhi"></i><p>Q币充值</p></div>
+        <div><i class="iconfont icon-chengshifuwu"></i><p>城市服务</p></div>
+        <div><i class="iconfont icon-gongyi"></i><p>腾讯公益</p></div>
+        <div><i class="iconfont"></i></div>
+    </div>
+</body>
+</html>
