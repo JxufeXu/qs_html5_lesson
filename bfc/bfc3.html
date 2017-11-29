@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bfc</title>
+    <style>
+        /* BFC 创建
+        overflow:hidden
+        position:absolute or relative */
+        span {
+            /* display: inline-block; */
+            width:200px;
+            height: 300px;
+            /* float: left; */
+            position: absolute;
+            top:0;
+            left: 0;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 行内元素将父元素撑起来,自己没有宽高 -->
+    <span>抓娃娃高手</span>
+</body>
+</html>

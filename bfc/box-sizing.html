@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box-sizing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 1.盒子的计算方式重新定义，有利于盒子计算
+        2.解决了IE的兼容性问题 */
+        *,*:before,*:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        /* 盒子的计算方式
+        IE box-sizing content+padding+boder
+        chrome content
+        box-sizing 将盒子统一为IE的模型 */
+        .item {
+            /* 占据位置 肉眼看不见
+            position margin (border,pad ,content) */
+            margin-right: 20px;
+            /* box-sizing: border-box; */
+            border: 2px solid blue;
+            padding: 10px;
+            float: left;
+            /* 内容宽度，并不是元素在页面上的盒子大小 */
+            width:50%;
+            height: 100px;
+            background-color: #123;
+        }
+        .item:nth-child(2n) {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="items">
+        <div class="item">sdjivo</div>
+        <div class="item">cdsjov</div>
+    </div>
+</body>
+</html>
