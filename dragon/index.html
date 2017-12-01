@@ -6,10 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
-    <link rel="stylesheet" href=".css/style.css">   
+    <link rel="stylesheet" href="css/style.css">   
 </head>
 <body>
-    <script>
-        </script>
+    <div class="dragon-poplayer" id="dragon-poplayer">
+        <div class="dragon-section dragon-ready-play" id="dragon-ready-play">
+            <div class="dragon-play">
+                <div class="music">
+                    <input type="checkbox" id="music-control">
+                    <label for="music-contral">声音</label>
+                </div>
+            </div>
+        </div>
+        <div class="dragon-section dragon-playing" id="dragon-playing">
+            <div id="music">
+                <audio src="//gw.alicdn.com/tfscom/TB1Ydd2LpXXXXaUXFXXsKFbFXXX.mp3" autoplay loop="true" preload="load"></audio>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js">
+
+    </script>
 </body>
 </html>
