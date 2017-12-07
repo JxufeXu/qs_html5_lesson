@@ -1,4 +1,3 @@
-那一只蚊子 2017/12/07 19:54:18
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +48,11 @@
       gesture
     <div class="title">pinch</div>
     <div class="imgBox">
-      <img src="./asset/asset/test.png" id="pinchImg">
+      <img src="./asset/test.png" id="pinchImg">
+    </div>
+    <div class="title">ratate</div>
+    <div class="imgBox">
+      <img src="./asset/test.png" alt="" id="rotateImg" />
     </div>
   </div>
   <!-- gesture 很复杂，ontouchstart
@@ -61,11 +64,23 @@ var pinchImg= document.getElementById('pinchImg');
 Transform(pinchImg);
 var initScale = 1;
 new AlloyFinger(pinchImg, {
-    tap:function() {
+    tab:function() {
         console.log('tap一下');
-        pinchImg.scalex = pinchImg.scaleY = initScale*evt.zoom;
-        pinchImg.scaley = pinchImg.scaleX = initScale*2;
+        pinchImg.scaleX = pinchImg.scaleY = initScale*2;
+        pinchImg.scaleY = pinchImg.scaleX = initScale*2;
+    },
+    pinch:function(evt) {
+        console.log('tap一下');
+        pinchImg.scaleX = pinchImg.scaleY = initScale*evt.zoom;
+        pinchImg.scaleY = pinchImg.scaleX = initScale*evt.zoom;
     }
+})
+var rotateImg = document.getElementById('rotateImg');
+Transform(rotateImg);
+new AlloyFinger(rotateImg, {
+  rotate: function(evt) {
+    rotateImg.rotateZ += evt.angle;
+  }
 })
 </script>
 </body>
