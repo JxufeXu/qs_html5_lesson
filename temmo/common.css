@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    /* pc ipad iphone */
+    user-select: none;
+}
+
+body,
+html {
+    font-family: 微软雅黑;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+}
+
+#Site {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    color: #440a0e;
+    opacity: 0;
+    transition: opacity 400ms ease-out;
+}
+
+#Site.init {
+    opacity: 1;
+}
+
+.main-container {
+    width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-img, .overflow-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.asset {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.catwalk-right {
+    bottom: 0;
+    right: 0;
+    background-image: url('http://lol.qq.com/act/a20161020teemo/_img/click/catwalk2.png');
+    width: 23%;
+    height: 44.4%;
+}
+
+.catwalk-left {
+    bottom: 6.9%;
+    left: 0;
+    width: 50%;
+    height: 60%;
+    background-image: url('http://lol.qq.com/act/a20161020teemo/_img/click/catwalk-left.png');
+}
+
+.smoke {
+    width: 50.5%;
+    height: 37.7%;
+    top: 17.8%;
+    left: 36.3%;
+    z-index: 10;
+    background-image: url('http://lol.qq.com/act/a20161020teemo/_img/click/_smoke2.png');
+    background-size: auto 100%;
+    opacity:  .2;
+    animation: smokeAnimation 1.2s infinite steps(5);
+}
+
+@keyframes smokeAnimation {
+    0% {
+        background-position: 0%;
+    }
+    32% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+.cauldron-container {
+    position: absolute;
+    width: 51.1%;
+    height: 64%;
+    bottom: 18.9%;
+    left: 30.7%;
+    z-index: 1;
+}
+
+.cauldron {
+    width: 100%;
+    height: 50%;
+    background-image: url('http://lol.qq.com/act/a20161020teemo/_img/click/cauldron.png');
+    bottom: 0;
+    left: 0;
+    background-size: auto 100%;
+
+}
+.door-mask {
+    position: absolute;
+    width: 20.8%;
+    height: 9%;
+    right: 0;
+    top: 49.9%;
+    overflow: hidden;
+}
+.door-shadow {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 18%;
+    background-image: url(../images/images/door-shadow.png);
+    z-index: 10;
+    background-repeat: no-repeat;
+}
+.minion-transition:nth-child(2) {
+    animation: minionRightMove 3.2s infinite linear -0.8s;
+    -webkit-animation: minionRightMove 3.2s infinite linear -0.8s;
+}
+.minion-transition {
+    animation: minionRightMove 3.2s infinite linear;
+    -webkit-animation: minionRightMove 3.2s infinite linear;
+    height: 100%;
+    position: absolute;
+}
+
+@keyframes minionRightMove{
+    0% {
+        transform: scaleX(-1) translate3d(-300%, 0, 0);
+        -webkit-transform: scaleX(-1) translate3d(-300%, 0, 0);
+    }
+    
+    25% {
+        transform: scaleX(-1) translate3d(-200%, 0, 0);
+        -webkit-transform: scaleX(-1) translate3d(-200%, 0, 0);
+    }
+  
+    50% {
+        transform: scaleX(-1) translate3d(-100%, 0, 0);
+        -webkit-transform: scaleX(-1) translate3d(-100%, 0, 0);
+    }
+    
+    70% {
+        transform: scaleX(-1) translate3d(0, 0, 0);
+        -webkit-transform: scaleX(-1) translate3d(0, 0, 0);
+    }
+    
+    100% {
+        transform: scaleX(-1) translate3d(100%, 0, 0);
+        -webkit-transform: scaleX(-1) translate3d(100%, 0, 0);
+    }
+}
+  
+.minion-right.delay3 {
+    animation-delay: -.3s;
+    -webkit-animation-delay: -.3s;
+}
+.minion-right {
+    height: 100%;
+    position: relative;
+    background-image: url(../images/images/minion-walk.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    animation: minionWalkAnimation 0.4s infinite steps(3);
+    -webkit-animation: minionWalkAnimation 0.4s infinite steps(3);
+}
+@keyframes minionWalkAnimation{
+    100% {
+        background-position: 100%;
+        background-position-x: 100%;
+        background-position-y: center;
+    }
+  }
+img.img-spacer {
+    opacity: 0;
+    height: 100%;
+}
+.catwalk-right {
+    bottom: 0;
+    right: 0;
+    width: 23%;
+    height: 44.4%;
+    background-image: url(../images/images/catwalk2.png);
+}
