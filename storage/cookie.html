@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookie</title>
+</head>
+<body>
+    <script>
+        function getCookie(name) {
+          var arr,reg = new RegExp("(^|)" + name + "=([^;]*)(;|$)");
+          if( arr = document.cookie.match(reg)) {
+              return unescape(arr[2]);
+          } else {
+              return null;
+          }
+      }
+        // document.cookie = 'uuid=123aws=31231323';
+        // 存的时候加个密，拿出来时解个密，保证不会变质
+        function setCookie(name,value,expiredays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + expiredays)
+            document.cookie = name + "=" + escape(value) + ((expiredays==null)?"":";expires="+exdate.toGMTString());
+        }
+        // setCookie('uuid','==121?wwa',30);
+        function delCookie (name) {
+            // 设置过期时间
+            var exp = new Date();
+            // 立即过期
+            exp.setTime(exp.getTime()-1);
+            var cval = getCookie(name);
+            if (cval) {
+                document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+            }
+        }
+
+        // 前端可以主动发起HTTP请求
+        const xhr = new XMLHttpRequest();
+        // 谓词 POST|GET|PUT|DELETE
+        // 异步
+        // ajax xhr对象在浏览器端主动向服务器的json资源发起请求 协议Http,等到服务器端的响应
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+                console.log(JSON.parse(xhr.responseText).a);
+                // var responsdeObj
+            }  
+        }
+        xhr.open("GET","/a.json",true);
+        xhr.send(null);
+    </script>
+</body>
+</html>
