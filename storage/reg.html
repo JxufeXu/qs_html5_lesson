@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookie</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var str = '_mkto_trk=id:335-VIN-535&token:_mch-qs.com-1511925175055-51355; _ga=GA1.2.1821934532.1511925175; username=ysw; uid=12345612';
+    // 正则对象  test match, ^ 在 [] 表示取否匹配任何不是尖括号后面的东西一直匹配到是这样东西为止就停止
+    var name = "username";
+    // var name = "uid";
+    // 在字符串内匹配特写值的小范围正则表达式
+    var reg = new RegExp("(^|)" + name + "=([^;]*)(;|$)");
+    // var reg = 
+    // console.log(reg.test(str));
+    console.log(reg.test(str));
+    console.log(str.match(reg));
+    var arr = str.match(reg);
+    console.log(arr[2]);
+    function getCookie(name) {
+          var arr,reg = new RegExp("(^|)" + name + "=([^;]*)(;|$)");
+          if( arr = document.cookie.match(reg)) {
+              return arr[2];
+          } else {
+              return null;
+          }
+      }
+</script>
+</html>
