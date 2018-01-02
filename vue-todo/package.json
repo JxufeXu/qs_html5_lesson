@@ -1,0 +1,19 @@
+{
+  "name": "vue-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "stylus:watch": "stylus -w -m styl/ -o dist/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "xuyanqing <804316947@qq.com> (https://github.com/beautifulgirlxuxu/yanqingxu.github.io)",
+  "license": "ISC",
+  "devDependencies": {
+    "stylus": "^0.54.5"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
+}
