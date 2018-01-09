@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="./dist/css/style.css">
+  
+</head>
+<body>
+  <!-- font-awesome 技能点，解决特定问题 可能10%页面用到 按需加载
+    用到单独加一下, http数 单独打包 dist/bundle.js... -->
+  <!-- normalize 不是一定要打包的 整站开发？比较多 模块式的开发，
+    很多个/dist 通用性的模块不要乱打包 资源重复加载 -->
+  <!-- <div id="app" class="container">
+      <div class="todo-wrapper">
+        <div class="todo-header">
+          <div class="overlay"></div>
+          <time class="clearfix">
+            <span class="day">2</span>
+            <span class="dayofweek">周二</span>
+            <span class="month">1, 2018</span>
+          </time>
+          <div class="add-circle">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </div>     
+      <div class="todo-content">
+        <div class="todo-content-title">
+          <h2>Your tasks</h2>
+          <p class="task-report">
+            <span class="task-remain">0 done</span> / 3 task(s)
+          </p>
+          <todo-report></todo-report>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- mvvm加组件
+  webpack 打包的js
+  向root挂载组件就好 -->
+  <div id="root"></div>
+  <script src="./dist/js/bundle.js"></script>
+</body>
+</html>
